@@ -13,3 +13,5 @@ This device is the Raspberry PI 3+ which includes a higher base clock at ~1.4 GH
 2. Retro Gaming Machine
 3. Network Monitoring Tool
 4. OpenVPN Server
+
+## Securing Linux
