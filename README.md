@@ -9,9 +9,18 @@ This device is the Raspberry PI 3+ which includes a higher base clock at ~1.4 GH
 
 
 ## Projects
-1. Media Center (Kodi)
+1. Media Center (OSMC / Kodi)
 2. Retro Gaming Machine
 3. Network Monitoring Tool
 4. OpenVPN Server
+
+## NOOBS (Bootloader)
+To make it convenient to install other builds, NOOBS v3.0 was installed as an initial boot loader. Currently, I went ahead and installed Raspbian Full (Desktop), Raspbian Lite, and OSMC Pi2 and each can be further customized if you want a full system, a low overhead server, or a dedicated entertainment system. 
+
+## OSMC
+Host Name: osmc-groomsmen
+
+
+
 
 ## Securing Linux
