@@ -19,6 +19,20 @@ To make it convenient to install other builds, NOOBS v3.0 was installed as an in
 
 ## OSMC
 Host Name: osmc-groomsmen
+Username: groomsmen
+Password: groomsmen
+Note: This password is used for both the Web Interface as well as the Apple Airplay password.
+
+Features Enabled:
+1) Remote Control via HTTP
+  - This allows for your phone/pc to be used as a remote for the system
+2) Apple Airplay Support
+  - You can just share media from your Apple device to the server and it will play
+3) Automatic Updates
+4) Enabled the event log
+For those inter
+OSMC has been configured to automatically look for update
+
 
 
 
