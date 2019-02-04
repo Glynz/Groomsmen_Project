@@ -18,14 +18,14 @@ To make it convenient to install other builds, NOOBS v3.0 was installed as an in
 ## OSMC
 OSMC is a free and open source media center. 
 
-###Login Details
+### Login Details
 Host Name: osmc-groomsmen
 SSH Username: osmc
 HTTP Webinterface Username: osmc
 Password: groomsmen
 Note: This password is used for both the Web Interface as well as the Apple Airplay password.
 
-###Non-Standard Features Enabled:
+### Non-Standard Features Enabled:
 1) Remote Control via HTTP
   - This allows for your phone/pc to be used as a remote for the system
   - required username and password
