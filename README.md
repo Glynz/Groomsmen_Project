@@ -46,3 +46,7 @@ https://osmc.tv/wiki/general/accessing-the-command-line/
 
 ### Miscellaneous:
 OSMC can also be configured to stream less than legal content onto the device similarly to Amazon's firestick hack. I did not install the apps necessary for this functionality, but if you're interested, all the configurations are properly setup. That moral choice is up to you now but know the risks invovled.
+
+Retropie:
+Installation on Raspbian: https://www.makeuseof.com/tag/install-retropie-app-raspberry-pi/
+iPhone Controller: https://www.reddit.com/r/RetroPie/comments/5qytdc/is_there_a_way_to_use_my_iphone_as_the/
