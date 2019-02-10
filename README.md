@@ -8,9 +8,9 @@ This device is the Raspberry PI 3+ which includes a higher base clock at ~1.4 GH
 
 ## Projects
 1. Media Center (OSMC / Kodi)
-2. Retro Gaming Machine
-3. Network Monitoring Tool
-4. OpenVPN Server
+2. Retro Gaming Machine (Raspbian Lite)
+3. Network Monitoring Tool (Raspbian Lite)
+4. OpenVPN Server (Raspbian Lite)
 
 ## NOOBS (Bootloader)
 To make it convenient to install other builds, NOOBS v3.0 was installed as an initial boot loader. Currently, I went ahead and installed Raspbian Full (Desktop), Raspbian Lite, and OSMC Pi2 and each can be further customized if you want a full system, a low overhead server, or a dedicated entertainment system. 
@@ -47,6 +47,19 @@ https://osmc.tv/wiki/general/accessing-the-command-line/
 ### Miscellaneous:
 OSMC can also be configured to stream less than legal content onto the device similarly to Amazon's firestick hack. I did not install the apps necessary for this functionality, but if you're interested, all the configurations are properly setup. That moral choice is up to you now but know the risks invovled.
 
-Retropie:
-Installation on Raspbian: https://www.makeuseof.com/tag/install-retropie-app-raspberry-pi/
-iPhone Controller: https://www.reddit.com/r/RetroPie/comments/5qytdc/is_there_a_way_to_use_my_iphone_as_the/
+# Raspbian Lite
+### Login Details
+Admin Username: pi
+Admin password: groomsmen
+Password: groomsmen
+Note: This password is used for both the Web Interface as well as the Apple Airplay password.
+
+## Retropie:
+Retropie is an amalmagation of console emulators that ranging from Nintendo 64 to Playstation 1. I did a basic install following the documentation found on their website [here](https://retropie.org.uk/docs/Manual-Installation/)
+
+To start the RetroPie emulator, run `emulationstation` in the terminal, and it will bring up the main configuration menu. I made a basic configuration for the games: keypad is the directional keys, d is A, z is start, and x is select. I suggest you follow the insturctions here to reset the configuration to your liking. I haven't installed any ROMs on the system, but they can be found on the web with a simple search. It's technically illegal for me to distribute ROMs that I don't own the rights to.... so I'll just link you to some open source ones: https://pdroms.de/news/gameboy/
+
+If you need to make adjustments to the configurations the home directory fot eh pi account contains the setup script.
+
+### Iphone Controller 
+If you're looking for a reto controller, an Iphone/Android device can be used instead of purchasing a controller. Here's a simple open source project that uses the web server on the raspbery pi to interact with your browser: https://github.com/retropie/retropie-setup/wiki/Virtual-Gamepad. Although it says it's Android only, it does seem to work as if configured correctly as stated [here](https://github.com/retropie/retropie-setup/wiki/Virtual-Gamepad).
