@@ -93,3 +93,6 @@ Now it really comes down to your use case for this system, but below I included 
 * [Wireless Print Server that supports Apple's AirPrint feature](https://opensource.com/article/18/3/print-server-raspberry-pi)
 * [Network Monitor Tool](https://www.networkworld.com/article/2225683/cisco-subnet/cisco-subnet-raspberry-pi-as-a-network-monitoring-node.html)
 * [Twitter Bot](https://www.instructables.com/id/Raspberry-Pi-Twitterbot/)
+
+# Closing
+As a final note, feel free to reach out to me if you guys run into any issues. This is the least I can do on my part as thanks for the time and energy that you have contributed to make my wedding a special and memorable day.
