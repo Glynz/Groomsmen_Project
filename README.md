@@ -4,25 +4,29 @@
 First off, I have to say a big thank you to you guys. Desite us not having known each other for very long in the grand scheme of things, I can say for certain that I was honored to have you stand with me up there on the aisle. It was a daunting day to say the least, but I couldn't ask for a better group of guys to be by my side. With the mushy stuff out of the way, lets get to the technical stuff.
 
 ## Base Configuration
-This device is the Raspberry PI 3+ which includes a higher base clock at ~1.4 GHz and 1GB of RAM making it a suitable platform for a variety of tasks. Although the device could be used as another basic computer in your life, this device, in my personal opnion, can be best utilized as a basic home server serving a variety of services across the network. As such, this raspberry pi has been configured as such. It has three main OS images installed: [Raspbian Stretch Lite](https://www.raspberrypi.org/downloads/raspbian/), [Raspbian Stretch Full](https://www.raspberrypi.org/downloads/raspbian/), and [OSMC](https://osmc.tv/). Raspbian Stretch is based on Debian OS which makes it an extremely powerful fully fledged Linux machine. The only difference between the Lite and Desktop version is that the Lite is a minimal headless version to keep the overhead and the Desktop comes with a full GUI frontend. For this system, most if not all of the services have been installed on the Rasbian Stretch Lite images. Lastly, the OSMC acts as a convenient home media player that functions almost identically to a cracked Amazon Firestick. With everything said, feel free to change the setup to better suit your needs.
+This device is the Raspberry PI 3+ which includes a higher base clock at ~1.4 GHz and 1GB of RAM making it a suitable platform for a variety of tasks. Although the device could be used as another basic computer in your life, this device, in my personal opnion, can be best utilized as a basic home server serving a variety of services across the network. As such, this raspberry pi has been configured as such. It has three main OS images installed: [Raspbian Stretch Lite](https://www.raspberrypi.org/downloads/raspbian/), [Raspbian Stretch Full](https://www.raspberrypi.org/downloads/raspbian/), and [OSMC](https://osmc.tv/). Raspbian Stretch is based on Debian OS which makes it an extremely powerful fully fledged Linux machine. The only difference between the Lite and Desktop version is that the Lite is a minimal headless version to keep the overhead and the Desktop comes with a full GUI frontend. For this system, most if not all of the services have been installed on the Rasbian Stretch Lite images. Lastly, the OSMC acts as a convenient home media player that functions almost identically to a cracked Amazon Firestick. With everything said, feel free to change the setup to better suit your needs. Also, please remember to change the passwords once you've setup your device as these are very poor passwords.
 
 ## Projects
 1. Media Center (OSMC / Kodi)
 2. Retro Gaming Machine (Raspbian Lite)
-3. Network Monitoring Tool (Raspbian Lite)
-4. OpenVPN Server (Raspbian Lite)
+3. OpenVPN Server (Raspbian Lite)
+4. Miscellaneous
 
 ## NOOBS (Bootloader)
 To make it convenient to install other builds, NOOBS v3.0 was installed as an initial boot loader. Currently, I went ahead and installed Raspbian Full (Desktop), Raspbian Lite, and OSMC Pi2 and each can be further customized if you want a full system, a low overhead server, or a dedicated entertainment system. 
 
-## OSMC
+## 1. OSMC
 OSMC is a free and open source media center. 
 
 ### Login Details
 Host Name: osmc-groomsmen
+
 SSH Username: osmc
+
 HTTP Webinterface Username: osmc
+
 Password: groomsmen
+
 Note: This password is used for both the Web Interface as well as the Apple Airplay password.
 
 ### Non-Standard Features Enabled:
@@ -51,15 +55,18 @@ OSMC can also be configured to stream less than legal content onto the device si
 This is essentially a low overhead version of the Raspbian project which is basically Debian OS.
 
 ### Login Details
-Admin Username: pi
+Admin account: pi
+
 Admin password: groomsmen
-User w/ sudo: grooms
+
+Username account w/ sudo: groomsmen
+
 Password: groomsmen
 
 ### System Security
 To make sure that you haven't added a vulnerable device to your system, [UnattendedUpgrades](https://wiki.debian.org/UnattendedUpgrades) was installed on your machine to perform automatic scheduled security patch installs everyday and reboots at 4:45 am if there were any packages installed. To implement these features, I followed this [post](https://blog.dantup.com/2016/04/setting-up-automatic-updates-on-raspberry-pi-raspbian-jessie/) with a few modifications to send the mail to the groomsmen user. To see what configurations were set, look at `/etc/apt/apt.conf.d/50unattended-upgrades`
 
-## Retropie:
+## 2. Retropie:
 Retropie is an amalmagation of console emulators that ranging from Nintendo 64 to Playstation 1. I did a basic install following the documentation found on their website [here](https://retropie.org.uk/docs/Manual-Installation/)
 
 To start the RetroPie emulator, run `emulationstation` in the terminal, and it will bring up the main configuration menu. I made a basic configuration for the games: keypad is the directional keys, d is A, z is start, and x is select. I suggest you follow the insturctions here to reset the configuration to your liking. I haven't installed any ROMs on the system, but they can be found on the web with a simple search. It's technically illegal for me to distribute ROMs that I don't own the rights to.... so I'll just link you to some open source ones: https://pdroms.de/news/gameboy/
@@ -68,3 +75,21 @@ If you need to make adjustments to the configurations the home directory fot eh 
 
 ### iPhone Controller 
 If you're looking for a reto controller, an Iphone/Android device can be used instead of purchasing a controller. Here's a simple open source project that uses the web server on the raspbery pi to interact with your browser: https://github.com/retropie/retropie-setup/wiki/Virtual-Gamepad. Although it says it's Android only, it does seem to work as if configured correctly as stated [here](https://github.com/retropie/retropie-setup/wiki/Virtual-Gamepad).
+
+## 3. OpenVPN Server
+Not interested in paying $15 a month for a dedicated VPN host? Well you should take a look at how to setup a OpenVPN server on your raspberry pi: http://www.pivpn.io/ and https://medium.freecodecamp.org/running-your-own-openvpn-server-on-a-raspberry-pi-8b78043ccdea. Unfortunately, without access to your router, I cannot completely setup this service as it does require a bit of network configuration. However, if you are interested, let me know, and I can try to help you out.
+
+There are three main parts to getting the server working:
+1) Installing the OpenVPN daemon on your machine
+2) Forwarding the correct port information on your router
+3) Setting up a dynamic DNs forwarding service
+  * There are [free services](https://www.noip.com/) that will direct DNS queries (e.g. groomsmen@dynamicDNS.net) to your home IP which is not a static.
+  
+If you do go down this path, realize that you are potentially exposing some of your network to the broad internet, but with proper setup, the risks are minimized.
+
+## 4. Miscellaneous
+Now it really comes down to your use case for this system, but below I included a few other project ideas / use cases that you can follow to get your system up and running. 
+* [Quake Game Server](https://quake.ie/quake-on-lan/)
+* [Wireless Print Server that supports Apple's AirPrint feature](https://opensource.com/article/18/3/print-server-raspberry-pi)
+* [Network Monitor Tool](https://www.networkworld.com/article/2225683/cisco-subnet/cisco-subnet-raspberry-pi-as-a-network-monitoring-node.html)
+* [Twitter Bot](https://www.instructables.com/id/Raspberry-Pi-Twitterbot/)
