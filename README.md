@@ -95,4 +95,4 @@ Now it really comes down to your use case for this system, but below I included 
 * [Twitter Bot](https://www.instructables.com/id/Raspberry-Pi-Twitterbot/)
 
 # Closing
-As a final note, feel free to reach out to me if you guys run into any issues. This is the least I can do on my part as thanks for the time and energy that you have contributed to make my wedding a special and memorable day.
+As a final note, feel free to reach out to me if you guys run into any issues. This is the least I can do on my part as thanks for the time and energy that you have contributed to make my wedding and everything leading up to this point a special and memorable experience. You guys are the best.
