@@ -47,12 +47,17 @@ https://osmc.tv/wiki/general/accessing-the-command-line/
 ### Miscellaneous:
 OSMC can also be configured to stream less than legal content onto the device similarly to Amazon's firestick hack. I did not install the apps necessary for this functionality, but if you're interested, all the configurations are properly setup. That moral choice is up to you now but know the risks invovled.
 
-# Raspbian Lite
+# Raspbian Stetch Lite
+This is essentially a low overhead version of the Raspbian project which is basically Debian OS.
+
 ### Login Details
 Admin Username: pi
 Admin password: groomsmen
+User w/ sudo: grooms
 Password: groomsmen
-Note: This password is used for both the Web Interface as well as the Apple Airplay password.
+
+### System Security
+To make sure that you haven't added a vulnerable device to your system, [UnattendedUpgrades](https://wiki.debian.org/UnattendedUpgrades) was installed on your machine to perform automatic scheduled security patch installs everyday and reboots at 4:45 am if there were any packages installed. To implement these features, I followed this [post](https://blog.dantup.com/2016/04/setting-up-automatic-updates-on-raspberry-pi-raspbian-jessie/) with a few modifications to send the mail to the groomsmen user. To see what configurations were set, look at `/etc/apt/apt.conf.d/50unattended-upgrades`
 
 ## Retropie:
 Retropie is an amalmagation of console emulators that ranging from Nintendo 64 to Playstation 1. I did a basic install following the documentation found on their website [here](https://retropie.org.uk/docs/Manual-Installation/)
@@ -61,5 +66,5 @@ To start the RetroPie emulator, run `emulationstation` in the terminal, and it w
 
 If you need to make adjustments to the configurations the home directory fot eh pi account contains the setup script.
 
-### Iphone Controller 
+### iPhone Controller 
 If you're looking for a reto controller, an Iphone/Android device can be used instead of purchasing a controller. Here's a simple open source project that uses the web server on the raspbery pi to interact with your browser: https://github.com/retropie/retropie-setup/wiki/Virtual-Gamepad. Although it says it's Android only, it does seem to work as if configured correctly as stated [here](https://github.com/retropie/retropie-setup/wiki/Virtual-Gamepad).
